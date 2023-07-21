@@ -19,7 +19,6 @@
             position: absolute;
             right: 0px;
             bottom: 150px;
-            
             transform: rotate(15deg);
         }
         #v_btn {
@@ -29,6 +28,11 @@
         #v_btn a {
             width:100px; margin:0 10px; 
             display:flex; align-items:flex-end;
+            transition: all 0.5s;
+            transform-origin: right bottom;
+        }
+        #v_btn a:hover {
+            transform: rotate(20deg)
         }
         #v_btn a img {width:100%;}
     </style>

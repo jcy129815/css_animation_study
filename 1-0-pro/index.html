@@ -17,14 +17,18 @@
         nav a {
             padding:30px 20px; color:#fff;
         }
-        main {}
+        main {position: relative;}
         main section {
             height:100vh;
             background-size:cover;
             background-position:center;
         }
         main section:nth-child(1) {background-image:url(images/optimize1.png);}
-        main section:nth-child(2) {background-image:url(images/optimize2.png);}
+        main section:nth-child(2) {
+            background:url(images/optimize2.png) no-repeat fixed;
+            background-size: cover;
+            
+        }
         main section:nth-child(3) {background-image:url(images/optimize3.png);}
         footer {color:#fff; text-align:center; padding:25px 0;}
     </style>
