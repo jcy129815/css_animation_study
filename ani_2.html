@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>animation2</title>
+    <style>
+        main .box {
+            width: 100px; height: 100px;
+        }
+        main .a {
+            background: palegreen;
+            border-radius: 50%;
+            animation: x500 5s;
+        }
+        main .b {
+            background: palevioletred;
+            animation: cfs 5s;
+        }
+        main .c {
+            background: peru;
+            animation: color 3s;
+        }
+        main .d {
+            background: purple;
+            animation: ball 2s;
+        }
+        
+        /*keyframes*/
+        @keyframes x500 {
+            10% {transform:translateX(0) rotate(0); background-color: #fff;}
+            20% {transform: translateX(50px) rotate(20deg); background-color: rgb(255, 217, 217);}
+            30% {transform:translateX(0) rotate(0);background-color: rgb(255, 255, 255);}
+            40% {transform:translateX(100px) rotate(45deg);background-color: rgb(253, 185, 185);}
+            50% {transform:translateX(0) rotate(0);background-color: rgb(255, 255, 255);}
+            60% {transform:translateX(200px) rotate(90deg);background-color: rgb(254, 134, 134);}
+            70% {transform: translateX(0) rotate(0);background-color: rgb(255, 255, 255);}
+            80% {transform:translateX(400px) rotate(135deg);background-color: rgb(254, 95, 95);}
+            90% {transform:translateX(0) rotate(0);background-color: rgb(255, 255, 255);}
+            95% {transform:translateX(800px) rotate(180deg);background-color: rgb(253, 44, 44);}
+            100% {transform:translateX(0) rotate(0);background-color: rgb(255, 255, 255);}
+        }
+        /*y축으러 200->0만큼 이동하는 애니메이션*/
+        @keyframes y0 {
+            0% {transform:translateY(200px)}
+            100% {transform: translateY(0)}
+        }
+        /*50도->150도 회전하는 애니메이션*/
+        @keyframes deg {
+            0% {transform:rotate(50deg)}
+            100% {transform: rotate(150deg)}
+        }
+        /*배경색 흭색->노랑 변경 애니메이션*/
+        @keyframes color {
+            0% {background-color: white;}
+            100% {background-color: yellow;}    
+        }
+        /*글자크기 1rem->3rem 변경 애니메이션*/
+        @keyframes fontsize {
+            0% {font-size: 1rem;}
+            100% {font-size: 3rem;}    
+        }
+        /*배경색 노랑->빨강, 글자색 검정->흰색 애니메이션*/
+        @keyframes cfs{
+            0% {
+                background-color: yellow;
+                color: black;
+            }
+            100% {
+                background-color: red;
+                color: white;
+            }
+        }
+        /*배경색 빨->녹->파*/
+        @keyframes cfs{
+            0% {
+                background-color: red;
+            }
+            50% {
+                background-color: green;
+            }
+            100% {
+                background-color: blue;
+            }
+        }
+
+        @keyframes ball{
+            0% {transform:translateX(0) rotate(0);}
+            100% {transform:translateX(300px) rotate(180deg);}
+        }
+
+        /*
+        1. 원하는 애니메이션에 keyframes 이름 지정하기
+            y축으로 200만큼 움직이고 싶다 >> y200
+            투명도를 1에서 0.5만큼 주고싶다 >> alpha1
+            가로 크기를 500만큼 키우고싶다 >> w500
+            ex) @key frames 이름 { }
+        2. 애니메이션의 시작과 끝을 구분해서 속성으로 지ㅏㄱ성한다
+        y축으로 200만큼 움직이고싶다 경우
+            0% {transfrom:translateY(0)}
+            100% {transfrom:translateY(200px)}
+        가로크기를 500만큼 키우고싶다 경우
+            0% {width:원본 크기의 값}
+            100% {width:500px}
+            ex) 
+            @keyframes 이름 {
+                0% {width:원본 크기값}
+                100% {width:500px}
+            }
+        */
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box a">a</div>
+        <div class="box b">b</div>
+        <div class="box c">c</div>
+        <div class="box d">d</div>
+    </main>
+</body>
+</html>
