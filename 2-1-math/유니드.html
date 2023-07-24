@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)유니드</title>
+    <title>이거(주)유니드</title>
     <link rel="stylesheet" href="reset.css">
     <style>
         /* #0f6e38 , w1200px*/
@@ -61,16 +61,38 @@
             display:flex; justify-content: space-between; align-items:center;
         }
         main .center h1 {color:#fff; display:flex; flex-flow:column nowrap; justify-content: space-between;}
-        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
-        main .center .right {
+        main .center h1 span {
+            font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
+        main .center h1 span:first-child{
+            animation: top 0.5s linear forwards;
+        }
+        main .center h1 span:last-child{
+            animation: top 1s cubic-bezier(1, 0, 1, 1.02) forwards;
+        }
+            main .center .right {
             position:relative; right:174px; top:-100px;
+            animation: left 1s;
+        
         }
         main .center .right span {
-            position:absolute; width:174px; height:174px;
+            position:absolute; width:174px; height:174px;}
+        main .center .right span:nth-child(1) {
+            animation: rotate 15s linear infinite;
         }
-        main .center .right span:nth-child(1) {}
         main .center .right span:nth-child(2) {text-align:center; line-height:174px;}
         /* animation */
+        @keyframes top {
+            0% {opacity: 0; transform: translateY(50px);}
+            100% {opacity: 1; transform: translateY(-30px); color: white;}
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+        @keyframes left {
+            0% {opacity: 0; transform: translateX(100px);}
+            100% {opacity: 1; transform: translateX(0);}
+        }
     </style>
 </head>
 <body>

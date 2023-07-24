@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>새로운 동아출판 초등교과서</title>
+    <title>이건가새로운 동아출판 초등교과서</title>
     <link rel="stylesheet" href="reset.css">
     <style>
         header {
@@ -25,30 +25,39 @@
 
         main #visual #deco .obj1 {
             top:170px; left:50%; margin-left:-342px;
+            animation: rotate 5s linear infinite alternate;
         }
         main #visual #deco .obj2 {
             left:0; top:150px;
+            animation: size 1s linear infinite alternate;
         }
         main #visual #deco .obj3 {
             left:100px; top:250px;
+            animation: rotate 1.5s linear infinite alternate;
         }
         main #visual #deco .obj4 {
             left:150px; top:350px;
+            animation: size 1.5s linear infinite alternate;
         }
         main #visual #deco .obj5 {
             right:0; top:150px;
+            animation: rotate 1s linear infinite alternate;
         }
         main #visual #deco .obj6 {
             right:200px; top:250px;
+            animation: rotate 1.7s linear infinite alternate;
         }
         main #visual #deco .obj7 {
             right:200px; top:240px;
+            animation: size 1s linear infinite alternate;
         }
         main #visual #deco .obj8 {
             left:270px; top:440px;
+            animation: rotate 1s linear infinite alternate;
         }
         main #visual #deco .obj9 {
             right:0; top:440px;
+            animation: size 1s linear infinite alternate;
         }
 
         main #book_center {
@@ -69,7 +78,14 @@
         main .category a.active {background:#26bad7; color:#fff;}
 
         /* 애니메이션 */
-
+        @keyframes rotate {
+            0% {transform: rotate(0);}
+            100% {transform: rotate(15deg);}
+        }
+        @keyframes size {
+            0% {scale: 0.7;}
+            100% {scale: 1;}
+        }
     </style>
 </head>
 <body>

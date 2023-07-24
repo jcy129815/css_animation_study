@@ -21,16 +21,34 @@
             transition: all 1s 0.5s;
         }
         main .target2 {
-            animation: right500 0.5s ease 3 alternate-reverse;
-            
+            animation: right500 1s 
+                ease 3 alternate both/*자주 사용됌*/;
+            /*이름 시간 가속도 지연시간 반복횟수 정/역 종료방법 */
         }
-        main .target3 {}
-        main .target4 {}
+        main .target3 {
+            animation: left_top_right 1s ease-out 8 alternate both;
+        }
+        main .target4 {
+            animation: opacity 8s;
+        }
         main .target5 {}
         /*animation + @keyframes*/
         @keyframes right500 {
             0% {transform: translateX(0);}
             100% {transform: translateX(500px);}
+        }
+        @keyframes left_top_right {
+            0% {transform: translate(0,0);}
+            50% {transform: translate(250px,-150px);
+                background-color: lightblue;
+            }
+            100% {transform: translate(500px,0);
+                background-color: lightgreen;
+            }
+        }
+        @keyframes opacity {
+            0% {opacity: 0; font-size: 1rem;}
+            100% {opacity: 1; font-size: 3rem;}
         }
         /*@keyfranmes 작성 위치 = style 맨 아래 혹은 외부 스타일 분리*/
         /*1. 원하는 애니메이션 시작 - 끝 정하기*/
