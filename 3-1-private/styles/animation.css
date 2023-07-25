@@ -1,0 +1,17 @@
+/*@keyframe*/
+@keyframes baqi {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(-360deg);}
+}
+@keyframes aaa {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(100px);}
+}
+@keyframes bg {
+    0% {background-position: 0 0;}
+    100% {background-position: 1000px 0;}
+}
+@keyframes mo {
+    0% {transform: translateY(-30deg);}
+    100% {transform: translateY(0deg);}
+}

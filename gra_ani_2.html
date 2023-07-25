@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tex gradient animation</title>
+    <style>
+        h1 {
+            font-weight: 800;
+            font-size: 5rem;
+            text-transform: uppercase;/*대문자로 변경*/
+            background: linear-gradient(90deg, white, pink, coral, skyblue, lime,white);
+            -webkit-background-clip: text; /*텍스트 안에서만 백그라운드가 보이게 해라*/
+            -webkit-text-fill-color: transparent; /*글자 색을 투명하게*/
+            background-size: 400%;
+            animation: text_bg 10s linear alternate infinite;
+        
+        }
+        @keyframes text_bg {
+            0% {background-position-X: 0%;}
+            100% {background-position-X: 400%;}
+        }
+    </style>
+</head>
+<body>
+    <h1>text gradient animation</h1>
+</body>
+</html>
